@@ -5,7 +5,7 @@
     font-family: "Genshin";
     font-style: normal;
     font-weight: normal;
-    src: url("/assets/Genshin_Impact_Font.woff") format("truetype");
+    src: url("https://msyagami.github.io/sy-2020-presentation/assets/Genshin_Impact_Font.woff") format("truetype");
 }
 
 @media only screen and (max-width: 641px) {
