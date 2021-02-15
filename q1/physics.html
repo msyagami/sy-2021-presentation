@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bump!</title>
-    <link rel="stylesheet" href="https://msyagami.github.io/sy-2020-presentation/css/article-styles.css">
+    <link rel="stylesheet" href="/css/article-styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <nav id="nav">
+    <nav class="nav" id="nav">
         <div class="">
-            <a href="https://msyagami.github.io/sy-2020-presentation/index.html">MegaloSansYagami</a>
+            <a href="/index.html">MegaloSansYagami</a>
+        </div>
+        <div class="material-icons">
+            <a href="javascript:void(0);" onclick="openMobileNav()" class="nav-menu-icon">&#xe5d2</a>
         </div>
         <div class="right-nav">
-            <a href="https://msyagami.github.io/sy-2020-presentation/index.html">Home</a>
-            <a href="#">Articles</a>
+            <a href="" style="display: none;"></a>
+            <a href="/index.html">Home</a>
+            <a href="/projects.html">Projects</a>
         </div>
     </nav>
     <header class="main-page-header">
         <div id="particles-js">
             <p class="header-text">Physics: Free Fall</p>
+            <p class="header-arrow"><span class="material-icons">&#xe313</span></p>
         </div>
     </header>
     <div class="article-section">
@@ -50,8 +57,11 @@
                     </div>
                 </article>
     </div>
-    <script src="https://msyagami.github.io/sy-2020-presentation/js/particles.js-master/particles.js"></script>
-    <script src="https://msyagami.github.io/sy-2020-presentation/q1/js/app.js"></script>
+    <footer class="footer">
+        <p class="footer-text">­­© 2020-2021 MegaloSansYagami. <span class="footer-text-right"><a href="https://github.com/msyagami/sy-2020-presentation/settings">Portfolio Repo</a></span></p>
+    </footer>
+    <script src="/js/particles.js-master/particles.js"></script>
+    <script src="/q1/js/app.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>

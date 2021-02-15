@@ -1,5 +1,166 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,700;1,400&family=Poppins:wght@400;700&display=swap');
 
+@media only screen and (max-width: 641px) {
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: #121212;
+        color: white;
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    .header-text{
+        position: absolute;
+        top: 38.5% !important;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 2.5rem !important;
+        font-weight: 700;
+        z-index: 100;
+        transition: .25s;
+    }
+
+    .header-text:hover{
+        top: 45vh;
+        left: 50vw;
+        font-size: 3.5rem !important;
+        background: linear-gradient(45deg, #FF1ABA, #ffc400);
+        text-shadow: none;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+    }
+
+    .header-arrow{
+        position: absolute;
+        top: 75% !important;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        z-index: 100;
+        transition: .25s;
+    }
+    
+    .header-arrow:hover{
+        top: 85%;
+        left: 47.29% !important;
+        transform: scale(1.5, 1.5);
+        background: linear-gradient(45deg, #FF1ABA, #ffc400);
+        text-shadow: none;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+    }
+
+    .nav{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        overflow: hidden;
+        background-color: #121212 !important;
+        position: sticky;
+        position: -webkit-sticky;
+        z-index: 101;
+        top: 0;
+    }
+    
+    .nav a {
+        float: left;
+        display: block;
+        color: #f5b64f;
+        text-align: center;
+        padding: 2vh;
+        text-decoration: none;
+        transition: .25s;
+    }
+    
+    .nav a:hover{
+        background-image: linear-gradient(0deg,#ff8a00,#e52e71);
+        color: white;
+    }
+    
+    .right-nav{
+        float: right;
+    }
+
+    .nav-menu-icon{
+        display: block !important;
+    }
+
+    .nav a:not(:first-child) {display: none;}
+    .nav a.nav-menu-icon {
+      float: right !important;
+    }
+    .right-nav{
+        float: none !important;
+    }
+
+    .nav.responsive a.nav-menu-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .main{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        padding: 0 !important;
+        border-radius: 16px;
+        background-color: #121212;
+        box-shadow: -1rem 0 3rem #000;
+        overflow-x: hidden;
+    }
+
+    .guide-section{
+        box-sizing: content-box;
+        display: unset !important;
+        width: calc(100vw - 71px);
+        margin: 0 0 1rem !important;
+        padding-left: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .q1-header-card{
+        background-image: linear-gradient(45deg,#ff1aba,#ffc400);
+        position: relative;
+        border-radius: 16px;
+        padding: 2rem;
+        /* margin: 0 4rem 0 0; */
+        /* display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        flex: 0 0 15vw; */
+    }
+    
+    .q2-header-card{
+        background-image: url("https://cdn.discordapp.com/attachments/764037870792605707/810747934072897536/vlcsnap-2021-02-14-21h38m29s314.png");
+        background-repeat: no-repeat;
+        background-position: 0rem !important;
+        background-size: cover;
+        position: relative;
+        border-radius: 16px;
+        padding: 2rem;
+        /* margin: 0 4rem 0 0; */
+        /* display: flex;
+        justify-content: flex-start;
+        flex-direction: column; */
+    }
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -55,33 +216,69 @@ body {
     -moz-background-clip: text;
 }
 
-#nav{
+.header-arrow{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    z-index: 100;
+    transition: .25s;
+}
+
+.header-arrow:hover{
+    top: 85%;
+    left: 49.28%;
+    transform: scale(1.5, 1.5);
+    background: linear-gradient(45deg, #FF1ABA, #ffc400);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+}
+
+.nav{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     overflow: hidden;
-    background-color: #121212;
+    background-color: transparent;
     position: sticky;
     position: -webkit-sticky;
     z-index: 101;
     top: 0;
 }
 
-#nav a {
+.nav a {
     float: left;
     display: block;
-    color: limegreen;
+    color: #f5b64f;
     text-align: center;
     padding: 2vh;
     text-decoration: none;
+    transition: .25s;
 }
 
-#nav a:hover{
+.nav a:hover{
     background-image: linear-gradient(0deg,#ff8a00,#e52e71);
     color: white;
 }
 
 .right-nav{
     float: right;
+}
+
+.material-icons{
+    display: inherit !important;
+}
+
+@media (min-width: 641px) {
+    .nav-menu-icon {
+        display: none !important;
+    }    
 }
 
 .article{
@@ -111,4 +308,32 @@ body {
 
 .big-image{
     max-width: 25%;
+}
+
+.footer {
+    font-family: 'Poppins', sans-serif;
+    font-size: .75rem;
+    padding: 1rem;
+}
+
+.footer-text{
+    color: #555;
+    transition: .25s;
+}
+
+.footer-text-right{
+    float: right;
+}
+
+.footer-text-right a{
+    color: #555;
+    transition: .25s;
+}
+
+.footer-text:hover{
+    color: #f5b64f;
+}
+
+.footer-text-right a:hover{
+    color: #fff;
 }
