@@ -276,6 +276,11 @@ body {
     float: right;
 }
 
+.scroller{
+    scrollbar-color: #f5b64f #121212;
+    scrollbar-width: thin;
+}
+
 .material-icons{
     display: inherit !important;
 }
