@@ -231,7 +231,7 @@ body {
 
 .header-arrow:hover{
     top: 85%;
-    left: 49.28%;
+    left: calc(50% - 11.5px);
     transform: scale(1.5, 1.5);
     background: linear-gradient(45deg, #FF1ABA, #ffc400);
     text-shadow: none;
@@ -239,6 +239,11 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
+}
+
+.tenor-gif-embed{
+    position: relative !important;
+    width: 25vw !important;
 }
 
 .nav{
@@ -306,8 +311,17 @@ body {
     font-style: italic;
 }
 
+.list {
+    color: #f5b64f;
+    list-style-position: inside;
+}
+
 .big-image{
     max-width: 25%;
+}
+
+.small-image{
+    max-width: 10%;
 }
 
 .footer {

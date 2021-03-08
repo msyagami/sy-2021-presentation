@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,700;1,400&family=Poppins:wght@400;700&display=swap');
-@import url('https://msyagami.github.io/sy-2021-presentation/assets/Genshin_Impact_Font.woff');
+@import url('/assets/Genshin_Impact_Font.woff');
 
 @font-face {
     font-family: "Genshin";
     font-style: normal;
     font-weight: normal;
-    src: url("https://msyagami.github.io/sy-2021-presentation/assets/Genshin_Impact_Font.woff") format("truetype");
+    src: url("/assets/Genshin_Impact_Font.woff") format("truetype");
 }
 
 @media only screen and (max-width: 641px) {
