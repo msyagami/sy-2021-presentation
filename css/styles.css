@@ -443,6 +443,16 @@ body {
     font-family: "Genshin", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.q3-header-title{
+    background: radial-gradient(#5af70d, #43cad0);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    font-family: "Genshin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .card{
     display: flex;
     position: relative;
@@ -525,6 +535,7 @@ body {
     padding: .5rem 0 1rem;
     line-height: 2;
     margin-bottom: 0;
+    overflow: auto;
 }
 
 .tags a {
