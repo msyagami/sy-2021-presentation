@@ -5,6 +5,8 @@ module.exports = {
       fontFamily: {
         sans:
           '-apple-system, "Helvetica Neue", "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+          quicksand:
+          '"Quicksand", sans-serif',
       },
       colors: {
         'accent-1': '#FAFAFA',
@@ -12,6 +14,7 @@ module.exports = {
         'accent-7': '#333',
         success: '#0070f3',
         cyan: '#79FFE1',
+        'msy-blue-100': "#E2EAF1",
       },
       spacing: {
         28: '7rem',
@@ -23,6 +26,7 @@ module.exports = {
         tight: 1.2,
       },
       fontSize: {
+        'mini': '0.5rem',
         '5xl': '2.5rem',
         '6xl': '2.75rem',
         '7xl': '4.5rem',

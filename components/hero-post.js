@@ -2,6 +2,7 @@ import Avatar from './avatar'
 import Date from './date'
 import CoverImage from './cover-image'
 import Link from 'next/link'
+import Quarter from './quarter'
 
 export default function HeroPost({
   title,
@@ -9,6 +10,7 @@ export default function HeroPost({
   date,
   excerpt,
   author,
+  quarter,
   slug,
 }) {
   return (
@@ -28,6 +30,7 @@ export default function HeroPost({
           </div>
         </div>
         <div>
+          <Quarter name={quarter.name} picture={quarter.picture} />
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
           <Avatar name={author.name} picture={author.picture} />
         </div>

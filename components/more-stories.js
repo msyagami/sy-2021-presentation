@@ -14,6 +14,7 @@ export default function MoreStories({ posts }) {
             coverImage={post.coverImage}
             date={post.date}
             author={post.author}
+            quarter={post.quarter}
             slug={post.slug}
             excerpt={post.excerpt}
           />
