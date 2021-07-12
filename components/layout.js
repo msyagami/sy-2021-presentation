@@ -6,10 +6,10 @@ import { Navbar } from './navbar'
 export default function Layout({ preview, children }) {
   return (
     <>
-    <Navbar />
       <Meta />
       <div className="min-h-screen">
         { preview ? <Alert preview={preview} /> : <> </> }
+        <Navbar />
         <main>{children}</main>
       </div>
       <Footer />

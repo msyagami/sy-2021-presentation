@@ -1,11 +1,11 @@
 import Container from '@/components/container'
 import MoreStories from '@/components/more-stories'
 import HeroPost from '@/components/hero-post'
-import Intro from '@/components/intro'
 import Layout from '@/components/layout'
-import { getAllPostsForHome } from '@/lib/api'
+import { getAllPostsForBlog } from '@/lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '@/lib/constants'
+import BlogIntro from '@/components/blogIntro'
 
 export default function Index({ allPosts, preview }) {
   const heroPost = allPosts[0]
@@ -14,10 +14,10 @@ export default function Index({ allPosts, preview }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>Blog | MegaloSansYagami</title>
         </Head>
         <Container>
-          <Intro />
+          <BlogIntro />
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -37,7 +37,7 @@ export default function Index({ allPosts, preview }) {
 }
 
 export async function getStaticProps({ preview = null }) {
-  const allPosts = (await getAllPostsForHome(preview)) || []
+  const allPosts = (await getAllPostsForBlog(preview)) || []
   return {
     props: { allPosts, preview },
   }

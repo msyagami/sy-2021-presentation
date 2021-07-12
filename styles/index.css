@@ -3,5 +3,24 @@
 @tailwind utilities;
 
 .grayscale {
+  transition: ease 0.25s;
   filter: grayscale(1);
+}
+
+.grayscale:hover {
+  filter:grayscale(0)
+}
+
+.underlineEffect{
+  background: 
+  linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)),
+  linear-gradient(to right, #135a8b, #ff1aba, #ffc400, #4ff03a);
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 250ms;
+}
+
+.underlineEffect:hover{
+  background-size: 0 0.1em, 100% 0.1em;
 }

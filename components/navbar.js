@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-export const Navbar = () => {
+export const Navbar = (props) => {
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
@@ -11,22 +11,41 @@ export const Navbar = () => {
   return (
     <>
       <nav className='flex items-center flex-wrap p-3 font-quicksand'>
-        <Link href='/'>
-          <a className='inline-flex items-center p-2 mr-4 '>
-            <svg
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
-              className='fill-current text-black h-8 w-8 mr-2'
-            >
-              <path d='M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z' />
-            </svg>
-            <span className='text-xl text-black font-bold tracking-wide'>
+        <div className="duration-100 group rounded-lg hover:bg-msy-blue-500">
+          <Link href='/'>
+            <a className='duration-100 group-hover:text-msy-blue-100 inline-flex items-center p-2 text-xl text-black font-bold tracking-wide'>
+              <svg
+                className="fill-current pr-1 stroke-current duration-100 text-msy-blue-900 group-hover:text-msy-blue-100"
+                id="alt_svg__Layer_2"
+                data-name="Layer 2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 192 192"
+                width="2em"
+                height="2em"
+                {...props}
+              >
+                <path
+                  className="alt_svg__cls-1"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="8px"
+                  d="M54.86 133.76V60.22M137.14 47.02l-.56 99.94"
+                />
+                <path
+                  d="M110.56-4S83 22.44 91 77.61s27 82.76-3 118.39"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="4px"
+                />
+              </svg>
               MegaloSansYagami
-            </span>
-          </a>
-        </Link>
+            </a>
+          </Link>
+        </div>
         <button
-          className=' inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-black ml-auto hover:text-green-400 outline-none'
+          className=' duration-100 inline-flex p-3 hover:bg-msy-blue-600 rounded lg:hidden text-black ml-auto hover:text-msy-blue-300 outline-none'
           onClick={handleClick}
         >
           <svg
@@ -46,33 +65,32 @@ export const Navbar = () => {
         </button>
         {/*Note that in this div we will use a ternary operator to decide whether or not to display the content of the div  */}
         <div
-          className={`${
-            active ? '' : 'hidden'
-          }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
+          className={`${active ? '' : 'hidden'
+            } w-full lg:inline-flex lg:flex-grow lg:w-auto`}
         >
           <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
             <Link href='/'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-green-600 hover:text-white '>
+              <a className='duration-100 lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-msy-blue-600 hover:text-msy-blue-100'>
                 Home
               </a>
             </Link>
             <Link href='/blog'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
+              <a className='duration-100 lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-msy-yellow-600 hover:text-msy-yellow-100'>
                 Articles
               </a>
             </Link>
-            <Link href='/'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
+            <Link href='/projects'>
+              <a className='duration-100 lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-pink-600 hover:text-msy-pink-100'>
                 Projects
               </a>
             </Link>
             <Link href='/'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
+              <a className='duration-100 lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-msy-green-700 hover:text-msy-green-100'>
                 About Me
               </a>
             </Link>
-            <Link href='/'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
+            <Link href='https://twitter.com/msyagam1'>
+              <a className='duration-100 lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-accent-7 hover:text-accent-1'>
                 Contact
               </a>
             </Link>

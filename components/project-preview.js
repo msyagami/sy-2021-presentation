@@ -2,15 +2,13 @@ import Avatar from './avatar'
 import Date from './date'
 import CoverImage from './cover-image'
 import Link from 'next/link'
-import Quarter from './quarter'
 
-export default function PostPreview({
+export default function ProjectPreview({
   title,
   coverImage,
   date,
   excerpt,
   author,
-  quarter,
   slug,
 }) {
   return (
@@ -29,9 +27,6 @@ export default function PostPreview({
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <div className="my-1">
         <Avatar name={author.name} picture={author.picture} />
-      </div>
-      <div className="my-1">
-        <Quarter name={quarter.name} picture={quarter.picture} />
       </div>
     </div>
   )
