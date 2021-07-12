@@ -5,6 +5,7 @@ import Head from 'next/head'
 import HeroProject from '@/components/project-post'
 import MoreProjects from '@/components/more-projects'
 import ProjectIntro from '@/components/projectIntro'
+import { HOME_OG_IMAGE_URL } from '@/lib/constants'
 
 export default function Index({ allProjects, preview }) {
   const heroProject = allProjects[0]
@@ -14,6 +15,7 @@ export default function Index({ allProjects, preview }) {
       <Layout preview={preview}>
         <Head>
           <title>Projects | MegaloSansYagami</title>
+          <meta property="og:image" content={HOME_OG_IMAGE_URL} />
         </Head>
         <Container>
           <ProjectIntro />

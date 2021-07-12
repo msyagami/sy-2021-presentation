@@ -36,7 +36,6 @@ export default function Meta() {
         name="description"
         content={`MegaloSansYagami SY2020-2021 Portfolio Website.`}
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
   )
 }

@@ -4,7 +4,7 @@ import HeroPost from '@/components/hero-post'
 import Layout from '@/components/layout'
 import { getAllPostsForBlog } from '@/lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '@/lib/constants'
+import { HOME_OG_IMAGE_URL } from '@/lib/constants'
 import BlogIntro from '@/components/blogIntro'
 
 export default function Index({ allPosts, preview }) {
@@ -15,6 +15,7 @@ export default function Index({ allPosts, preview }) {
       <Layout preview={preview}>
         <Head>
           <title>Blog | MegaloSansYagami</title>
+          <meta property="og:image" content={HOME_OG_IMAGE_URL} />
         </Head>
         <Container>
           <BlogIntro />
