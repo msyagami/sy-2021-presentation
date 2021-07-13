@@ -1,12 +1,12 @@
-# sy-2021-presentation-backend
+# sy-2021-presentation
 
 Welcome to my demo of SY 2020-2021 portfolio!
 
-Frontend repo is [here](https://github.com/msyagami/sy-2021-presentation-backend). And preview is [available here](https://msyagami-sy-2021-presentation.vercel.app/).
+Backend repo is [here](https://github.com/msyagami/sy-2021-presentation-backend). And preview is [available here](https://msyagami-sy-2021-presentation.vercel.app/).
 
 ## ⬇ Installing
 
-You will need [NodeJS](https://nodejs.org/en/) version 12 and above installed.
+You will need [NodeJS](https://nodejs.org/en/) version 14 and above installed.
 
 You will also need [a Strapi application](https://strapi.io/documentation) running to provide the information to be displayed.
 
