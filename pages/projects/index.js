@@ -20,6 +20,7 @@ export default function Index({ allProjects, preview }) {
           <meta property="og:image:alt" content={HOME_OG_IMAGE_URL} />
           <meta property="og:title" content="Projects | MegaloSansYagami" />
           <meta property="og:description" content="MegaloSansYagami SY 2020-2021 Portfolio Website." />
+          <meta property="og:type" content="website" />
         </Head>
         <Container>
           <ProjectIntro />

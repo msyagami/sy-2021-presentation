@@ -36,6 +36,7 @@ export default function Post({ post, morePosts, preview }) {
                 <meta property="og:description" content={`${post.excerpt}`} />
                 <meta property="og:image" content={post.ogImage.url} />
                 <meta property="og:image:alt" content={HOME_OG_IMAGE_URL} />
+                <meta property="og:type" content="article" />
               </Head>
               <PostHeader
                 title={post.title}
