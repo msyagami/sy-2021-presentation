@@ -1,0 +1,34 @@
+{
+  "name": "sy-2021-presentation-frontend",
+  "version": "4.0.0",
+  "private": true,
+  "description": "The School Year 2021 Presentation frontend project by MegaloSansYagami. Made with NextJS.",
+  "repository": {
+    "url": "https://github.com/msyagami/sy-2021-presentation"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "prod": "cross-env NODE_ENV=production next start"
+  },
+  "dependencies": {
+    "classnames": "2.3.1",
+    "cross-env": "^7.0.3",
+    "date-fns": "2.22.1",
+    "isomorphic-unfetch": "3.1.0",
+    "next": "11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-svg": "^14.0.3",
+    "remark": "13.0.0",
+    "remark-html": "13.0.1"
+  },
+  "devDependencies": {
+    "postcss": "^8.3.2",
+    "postcss-flexbugs-fixes": "5.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^2.2.4"
+  },
+  "license": "MIT"
+}
