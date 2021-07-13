@@ -6,11 +6,12 @@ import Layout from '@/components/layout'
 import { getAllProjectsWithSlug, getProjectAndMoreProjects } from '@/lib/api'
 import PostTitle from '@/components/post-title'
 import Head from 'next/head'
-import { CMS_NAME } from '@/lib/constants'
 import markdownToHtml from '@/lib/markdownToHtml'
 import MoreProjects from '@/components/more-projects'
 import ProjectHeader from '@/components/project-header'
 import ProjectBody from '@/components/project-body'
+import { HOME_OG_IMAGE_URL } from '@/lib/constants'
+import ProjectTop from '@/components/projectHeader'
 
 export default function Project({ project, moreProjects, preview }) {
   const router = useRouter()
@@ -20,16 +21,21 @@ export default function Project({ project, moreProjects, preview }) {
   return (
     <Layout preview={preview}>
       <Container>
+        <ProjectTop />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
             <article>
               <Head>
-                <title>
+              <title>
                   {project.title} (Project) | MegaloSansYagami
                 </title>
+                <meta property="og:url" content={`${process.env.MAIN_PAGE_URL}/projects/${project.slug}`} />
+                <meta property="og:title" content={`${project.title} (Project) | MegaloSansYagami`} />
+                <meta property="og:description" content={`${project.excerpt}`} />
                 <meta property="og:image" content={project.ogImage.url} />
+                <meta property="og:image:alt" content={HOME_OG_IMAGE_URL} />
               </Head>
               <ProjectHeader
                 title={project.title}

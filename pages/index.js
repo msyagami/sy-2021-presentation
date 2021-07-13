@@ -5,7 +5,7 @@ import Intro from '@/components/intro'
 import Layout from '@/components/layout'
 import { getAllPostsForHome } from '@/lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '@/lib/constants'
+import { HOME_OG_IMAGE_URL } from '@/lib/constants'
 
 export default function Index({ allPosts, preview }) {
   const heroPost = allPosts[0]
@@ -15,7 +15,11 @@ export default function Index({ allPosts, preview }) {
       <Layout preview={preview}>
         <Head>
           <title>Home | MegaloSansYagami</title>
+          <meta property="og:url" content={process.env.MAIN_PAGE_URL} />
           <meta property="og:image" content={heroPost.coverImage} />
+          <meta property="og:image:alt" content={HOME_OG_IMAGE_URL} />
+          <meta property="og:title" content="Home | MegaloSansYagami" />
+          <meta property="og:description" content="MegaloSansYagami SY 2020-2021 Portfolio Website." />
         </Head>
         <Container>
           <Intro />

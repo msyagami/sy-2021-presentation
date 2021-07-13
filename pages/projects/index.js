@@ -14,8 +14,12 @@ export default function Index({ allProjects, preview }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Projects | MegaloSansYagami</title>
-          <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+        <title>Projects | MegaloSansYagami</title>
+        <meta property="og:url" content={`${process.env.MAIN_PAGE_URL}/projects`} />
+          <meta property="og:image" content={heroProject.coverImage} />
+          <meta property="og:image:alt" content={HOME_OG_IMAGE_URL} />
+          <meta property="og:title" content="Projects | MegaloSansYagami" />
+          <meta property="og:description" content="MegaloSansYagami SY 2020-2021 Portfolio Website." />
         </Head>
         <Container>
           <ProjectIntro />

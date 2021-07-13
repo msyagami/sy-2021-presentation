@@ -7,7 +7,7 @@ export default function Quarter({ name, picture }) {
           src={`${
             url.startsWith('/') ? process.env.NEXT_PUBLIC_STRAPI_API_URL : ''
           }${url}`}
-          className="w-12 h-12 rounded-full mr-4 md:mx-4  md:hidden"
+          className="w-12 h-12 rounded-full mr-4 md:mx-4 md:hidden"
           alt={name}
         />
         <div className="text-xl font-bold">Under {name}</div>

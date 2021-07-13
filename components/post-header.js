@@ -20,10 +20,10 @@ export default function PostHeader({ title, coverImage, date, quarter, author })
         <CoverImage title={title} url={coverImage.url} />
       </div>
       <div className="max-w-2xl mx-auto">
-        <div className="block md:hidden mb-6">
+        <div className="block md:hidden my-2">
           <Avatar name={author.name} picture={author.picture} />
         </div>
-        <div className="block md:hidden mb-6">
+        <div className="block md:hidden my-2">
           <Quarter name={quarter.name} picture={quarter.picture} />
         </div>
         <div className="mb-6 text-lg">

@@ -84,7 +84,7 @@ export const Navbar = (props) => {
                 Projects
               </a>
             </Link>
-            <Link href='/'>
+            <Link href='/posts/about-me'>
               <a className='duration-100 lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-msy-green-700 hover:text-msy-green-100'>
                 About Me
               </a>
