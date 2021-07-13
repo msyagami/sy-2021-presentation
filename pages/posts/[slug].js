@@ -10,8 +10,8 @@ import Layout from '@/components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api'
 import PostTitle from '@/components/post-title'
 import Head from 'next/head'
-import { CMS_NAME } from '@/lib/constants'
 import markdownToHtml from '@/lib/markdownToHtml'
+import { HOME_OG_IMAGE_URL } from '@/lib/constants'
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
@@ -29,15 +29,21 @@ export default function Post({ post, morePosts, preview }) {
             <article>
               <Head>
                 <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
+                  {post.title} (Article) | MegaloSansYagami
                 </title>
+                <meta property="og:url" content={`${process.env.MAIN_PAGE_URL}/posts/${post.slug}`} />
+                <meta property="og:title" content={`${post.title} (Article) | MegaloSansYagami`} />
+                <meta property="og:description" content={`${post.excerpt}`} />
                 <meta property="og:image" content={post.ogImage.url} />
+                <meta property="og:image:alt" content={HOME_OG_IMAGE_URL} />
+                <meta property="og:type" content="article" />
               </Head>
               <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
+                quarter={post.quarter}
               />
               <PostBody content={post.content} />
             </article>
