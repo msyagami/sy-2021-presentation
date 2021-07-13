@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,700;1,400&family=Poppins:wght@400;700&display=swap');
+@import url('/assets/Genshin_Impact_Font.woff');
+
+@font-face {
+    font-family: "Genshin";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/assets/Genshin_Impact_Font.woff") format("truetype");
+}
+
+:root{
+    --main-bg-img: url(https://cdn.discordapp.com/attachments/764037870792605707/847426526348836864/unknown.png);
+    --body-color: rgb(40, 126, 131);
+    --nav-color: rgba(91, 248, 13, 0.5);
+    --navm-color: #2f7e08;
+    --chosen-gradient: linear-gradient(45deg, #5af70d, #43cad0);
+    --nav-gradient: linear-gradient(45deg, #5af70d, #43cad0);
+    --primary-color: #5af70d;
+    --secondary-color: #60dbe2;
+}
+
+@media only screen and (max-width: 641px) {
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: var(--body-color);
+        color: white;
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    .header-text{
+        position: absolute;
+        top: 38.5% !important;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 2.5rem !important;
+        font-weight: 700;
+        z-index: 100;
+        transition: .25s;
+    }
+
+    .header-text:hover{
+        top: 45vh;
+        left: 50vw;
+        font-size: 3.5rem !important;
+        background: var(--chosen-gradient);
+        text-shadow: none;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+    }
+
+    .header-arrow{
+        position: absolute;
+        top: 75% !important;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        z-index: 100;
+        transition: .25s;
+    }
+    
+    .header-arrow:hover{
+        top: 85%;
+        left: 47.29% !important;
+        transform: scale(1.5, 1.5);
+        background: var(--chosen-gradient);
+        text-shadow: none;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+    }
+
+    .nav{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        overflow: hidden;
+        background-color: var(--navm-color) !important;
+        position: sticky;
+        position: -webkit-sticky;
+        z-index: 101;
+        top: 0;
+    }
+    
+    .nav a {
+        float: left;
+        display: block;
+        color: var(--secondary-color);
+        text-align: center;
+        padding: 2vh;
+        text-decoration: none;
+        transition: .25s;
+    }
+    
+    .nav a:hover{
+        background-image: var(--nav-gradient);
+        color: white;
+    }
+    
+    .right-nav{
+        float: right;
+    }
+
+    .nav-menu-icon{
+        display: block !important;
+    }
+
+    .nav a:not(:first-child) {display: none;}
+    .nav a.nav-menu-icon {
+      float: right !important;
+    }
+    .right-nav{
+        float: none !important;
+    }
+
+    .nav.responsive a.nav-menu-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .main{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        padding: 0 !important;
+        border-radius: 16px;
+        background-color: #121212;
+        box-shadow: -1rem 0 3rem #000;
+        overflow-x: hidden;
+    }
+
+    .guide-section{
+        box-sizing: content-box;
+        display: unset !important;
+        width: calc(100vw - 71px);
+        margin: 0 0 1rem !important;
+        padding-left: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .q1-header-card{
+        background-image: linear-gradient(45deg,#ff1aba,#ffc400);
+        position: relative;
+        border-radius: 16px;
+        padding: 2rem;
+        /* margin: 0 4rem 0 0; */
+        /* display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        flex: 0 0 15vw; */
+    }
+    
+    .q2-header-card{
+        background-image: url("https://cdn.discordapp.com/attachments/764037870792605707/810747934072897536/vlcsnap-2021-02-14-21h38m29s314.png");
+        background-repeat: no-repeat;
+        background-position: 0rem !important;
+        background-size: cover;
+        position: relative;
+        border-radius: 16px;
+        padding: 2rem;
+        /* margin: 0 4rem 0 0; */
+        /* display: flex;
+        justify-content: flex-start;
+        flex-direction: column; */
+    }
+
+    .q3-header-card{
+        background-image: url("https://cdn.discordapp.com/attachments/764037870792605707/847735618543943680/unknown.png");
+        background-repeat: no-repeat;
+        background-position:-1rem !important;
+        background-size: cover;
+        position: relative;
+        border-radius: 16px;
+        padding: 2rem;
+        /* margin: 0 4rem 0 0; */
+        /* display: flex;
+        justify-content: flex-start;
+        flex-direction: column; */
+    }
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--body-color);
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    transition: .25s;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--chosen-gradient);
+    border-radius: 12px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+.main-page-header{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+#particles-js{
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+    background-color: #121212; 
+    background-image: var(--main-bg-img);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 50% 50%; 
+}
+
+.header-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    z-index: 100;
+    transition: .25s;
+}
+
+.header-text:hover{
+    top: 45vh;
+    left: 50vw;
+    font-size: 4rem;
+    background: var(--chosen-gradient);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+}
+
+.header-arrow{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    z-index: 100;
+    transition: .25s;
+}
+
+.header-arrow:hover{
+    top: 85%;
+    left: 49.28%;
+    transform: scale(1.5, 1.5);
+    background: var(--chosen-gradient);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+}
+
+.nav{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    overflow: hidden;
+    background-color: var(--nav-color);
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 101;
+    top: 0;
+}
+
+.nav a {
+    float: left;
+    display: block;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 2vh;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.nav a:hover{
+    background-image: var(--nav-gradient);
+    color: white;
+}
+
+.right-nav{
+    float: right;
+}
+
+.material-icons{
+    display: inherit !important;
+}
+
+@media (min-width: 641px) {
+    .nav-menu-icon {
+        display: none !important;
+    }    
+}
+
+.guide-section{
+    box-sizing: content-box;
+    display: flex;
+    width: calc(100vw - 71px);
+    margin: 0 0 5rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background-color: #121212;
+    box-shadow: -1rem 0 3rem #000;
+    overflow-x: hidden;
+}
+
+.card-list{
+    display: flex;
+    padding: 3rem;
+    overflow-x: scroll;
+}
+
+.card-list::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+.card-list::-webkit-scrollbar-thumb {
+    background: var(--chosen-gradient);
+    border-radius: 12px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+.scroller{
+    scrollbar-color: var(--primary-color) var(--body-color);
+    scrollbar-width: thin;
+}
+
+.scroller-b{
+    scrollbar-color: var(--primary-color) #121212;
+    scrollbar-width: thin;
+}
+
+.q1-header-card{
+    background-image: linear-gradient(45deg,#ff1aba,#ffc400);
+    position: relative;
+    border-radius: 16px;
+    padding: 2rem;
+    /* margin: 0 4rem 0 0; */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex: 0 0 15vw;
+}
+
+.q2-header-card{
+    background-image: url("https://cdn.discordapp.com/attachments/764037870792605707/810747934072897536/vlcsnap-2021-02-14-21h38m29s314.png");
+    background-repeat: no-repeat;
+    background-position: -21rem;
+    background-size: cover;
+    position: relative;
+    border-radius: 16px;
+    padding: 2rem;
+    /* margin: 0 4rem 0 0; */
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex: 0 0 15vw;
+}
+
+.q3-header-card{
+    background-image: url("https://cdn.discordapp.com/attachments/764037870792605707/847735618543943680/unknown.png");
+    background-repeat: no-repeat;
+    background-position: -21rem;
+    background-size: cover;
+    position: relative;
+    border-radius: 16px;
+    padding: 2rem;
+    /* margin: 0 4rem 0 0; */
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex: 0 0 15vw;
+}
+
+/* .header-card
+    background-image: linear-gradient(45deg,#ff1aba,#ffc400);
+    position: relative;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 0 4rem 0 0; <-comment once applied->
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex: 0 0 15vw; 
+*/
+
+.q1-header-title{
+    font-family: 'Poppins', sans-serif;
+}
+
+.q2-header-title{
+    background: radial-gradient(#fefda4, #f6e832, #f5b64f, #eeab49);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    font-family: "Genshin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.q3-header-title{
+    background: radial-gradient(#5af70d, #43cad0);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    font-family: "Genshin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 1.6vw;
+    background-color: #121212;
+    box-shadow: -1rem 0 3rem #000;
+    transition: .25s;
+}
+
+.card:hover{
+    transform: translateY(-1rem);
+}
+
+.card:hover~.card{
+    transform: translateX(130px);
+}
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+.card-header h2:hover{
+    background: var(--chosen-gradient);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+}
+
+.card-header a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-author{
+    position: relative;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    margin: 3rem 0 0;
+}
+
+.author-avatar img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    margin: 16px 10px;
+}
+
+.icon-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 48px;
+    fill: none;
+    stroke: limegreen;
+    stroke-width: 8;
+    stroke-linecap: round;
+    pointer-events: none;
+}
+
+.author-name-prefix{
+    font-style: normal;
+    font-weight: 400;
+    color: limegreen;
+    opacity: 50%;
+}
+
+.tags {
+    margin: 1rem 0 2rem;
+    padding: .5rem 0 1rem;
+    line-height: 2;
+    margin-bottom: 0;
+    overflow: auto;
+}
+
+.tags a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: .5rem;
+    color: #7a7a8c;
+    text-transform: uppercase;
+    font-size: .66rem;
+    border: 3px solid #28242f;
+    border-radius: 2rem;
+    padding: .2rem .85rem .25rem;
+    position: relative;
+}
+
+.tags a:hover {
+    background: var(--chosen-gradient);
+    text-shadow: none;
+    box-decoration-break: clone;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+    background-clip: text;
+    border-color: #555;
+}
+
+.footer {
+    font-family: 'Poppins', sans-serif;
+    font-size: .75rem;
+    padding: 1rem;
+}
+
+.footer-text{
+    color: #f2f2f2;
+    transition: .25s;
+}
+
+.footer-text-right{
+    float: right;
+}
+
+.footer-text-right a{
+    color: #f2f2f2;
+    transition: .25s;
+}
+
+.footer-text:hover{
+    color: var(--primary-color);
+}
+
+.footer-text-right a:hover{
+    color: var(--primary-color);
+}
