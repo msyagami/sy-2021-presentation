@@ -45,5 +45,6 @@ export async function getStaticProps({ preview = null }) {
   const allProjects = (await getAllProjectsForProjPage(preview)) || []
   return {
     props: { allProjects, preview },
+    revalidate: 60 * 60 * 3,
   }
 }
