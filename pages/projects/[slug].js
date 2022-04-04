@@ -35,7 +35,6 @@ export default function Project({ project, moreProjects, preview }) {
                 <meta property="og:title" content={`${project.title} (Project) | MegaloSansYagami`} />
                 <meta property="og:description" content={`${project.excerpt}`} />
                 <meta property="og:image" content={project.ogImage.url} />
-                <meta property="og:image:alt" content={HOME_OG_IMAGE_URL} />
                 <meta property="og:type" content="article" />
               </Head>
               <ProjectHeader
